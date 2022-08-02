@@ -66,7 +66,6 @@ body {
 }
 
 .header-logo-menu {
-    width: 91%;
     display: flex;
     margin-left: auto;
     margin-right: auto;
@@ -81,6 +80,8 @@ body {
     margin-top: 225px;
     z-index: 1;
 }
+
+
 
 .header-text {
     width: 79%;
@@ -132,7 +133,7 @@ body {
     }
 
     .header-logo-menu {
-        width: 72%;
+        width: 1200px;
         justify-content: space-between;
         align-items: center;
     }
@@ -146,8 +147,16 @@ body {
         list-style-type: none;
         z-index: 1;
     }
+
+    .menu li {
+        display: inline;
+    }
+        
+    .menu li:nth-child(n+2) {
+        margin-left: 35px;
+    }
       
-      .menu-link{ 
+    .menu-link{ 
         font-family: OpenSans-Regular, Arial, sans-serif;
         text-transform: uppercase;
         font-size: 13px;
@@ -155,14 +164,10 @@ body {
         color: rgb(255, 255, 255);
     }
       
-      .menu-link:hover {
+    .menu-link:hover {
         text-decoration: underline;
     }
       
-      .menu-link:nth-child(n+2) {
-        margin-left: 35px;
-    }
-
     .menu-button {
         margin: 0;
     }
@@ -232,7 +237,7 @@ body {
     background-color: rgb(239, 246, 241);
 }
 
-.trend-margin {
+.trend:nth-child(n+1) {
     margin-top: 3px;
 }
 
@@ -331,12 +336,8 @@ li {
         width: calc(50% - 1.5px);
     }
     
-    .trends section:nth-child(2n+2) {
-        margin-right: 3px;
-    }
-
-    .trend-margin-first {
-        margin-top: 3px;
+    .trend:nth-child(odd) {
+        margin-left: 3px;
     }
 }
 
@@ -345,41 +346,48 @@ li {
         width: calc(25% - 2.25px);
     }
 
-    .trend-margin {
+    .trend:nth-child(n+3) {
         margin-left: 3px;
     }
 
-    .trend-margin-first {
-        margin-top: 3px;
+    .trend:nth-child(4n+6) {
+        margin-left: 0;
+    }
+
+    .trend-tegs {
+        display: inline;
+    }
+
+    .trend-teg:nth-child(n+2) {
+        padding-left: 0;
+    }
+
+    .trend-teg-margin {
+        margin-left: 0;
     }
 }
 
 @media (min-width: 641px) and (max-width: 1200px) and (orientation: portrait) {
     .trend {
-        width: calc(50% - 1.5px);
-        
+        width: calc(50% - 1.5px);        
     }
-
-    .trends section:nth-child(2n+2) {
-        margin-right: 3px;
-    }
-
-    .trend-margin-first {
-        margin-top: 3px;
+    .trend:nth-child(odd) {
+        margin-left: 3px;
     }
 }
 
 @media (min-width: 1201px) {
     .trend {
         width: calc(25% - 2.25px);
-    }
-
-    .trend-margin {
         margin-left: 3px;
     }
 
-    .trend-margin-first {
-        margin-top: 3px;
+    .trend:nth-child(2) {
+        margin-left: 0;
+    }    
+
+    .trend:nth-child(4n+6) {
+        margin-left: 0;
     }
 }
 
@@ -1180,6 +1188,7 @@ input:focus-visible {
     box-sizing: border-box;
     padding-left: 20px;
     padding-top: 20px;
+    resize: none;
 }
 
 .popup-form-button {
