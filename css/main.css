@@ -392,7 +392,7 @@ li {
 }
 
 .page {
-    max-width: 91%;
+    max-width: 91%;                           
     display: flex;
     flex-wrap: wrap;
     margin-left: auto;
@@ -432,6 +432,7 @@ li {
     flex-grow: 1;
 }
 
+
 .img-post {
     width: 100%;
     margin-bottom: 16px;
@@ -439,6 +440,30 @@ li {
 
 .article-block {
     width: 100%;
+}
+
+@media (min-width: 1201px) {
+
+    .page {
+        max-width: 1170px;                           
+    }
+    .posts {
+        width: 66%;
+        margin-right: 126px;
+    }
+
+    .post {
+        border: none;
+    }
+
+    .imgs-post {
+        width: 49%;
+        margin-right: 30px;
+    }
+
+    .article-block {
+        width: 47%;
+    }
 }
 
 .article-tags {
