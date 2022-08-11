@@ -1063,7 +1063,7 @@ input:focus-visible {
 }
 
 .footer {
-    width: 91%;
+    max-width: 1170px;
     margin: 43px auto 50px auto;
 }
 
